@@ -1,0 +1,25 @@
+# Core scraping
+requests==2.32.3
+beautifulsoup4==4.12.3
+# lxml==5.2.2
+
+# Dynamic sites
+playwright==1.48.0
+
+# Database
+SQLAlchemy==2.0.35
+pymysql==1.1.1  # only needed if you use MySQL (DB_URL=mysql+pymysql://...)
+
+# Scheduling
+schedule==1.2.2
+
+# Notifications
+python-dotenv==1.0.1
+twilio==9.0.0
+
+# Logging and export
+pandas==2.2.2
+openpyxl==3.1.5
+
+streamlit==1.38.0
+plotly==5.23.0

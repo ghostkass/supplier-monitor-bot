@@ -1,0 +1,9 @@
+# --- Replace your notify() in monitor.py with this version ---
+from notifiers.email_notifier import send_email
+from notifiers.twilio_notifier import send_whatsapp
+
+def notify(subject: str, body: str):
+    # Email (if configured) — falls back to DRY-RUN
+    send_email(subject, body)
+    # WhatsApp (if configured) — falls back to DRY-RUN
+    send_whatsapp(f"{subject}\n{body}")

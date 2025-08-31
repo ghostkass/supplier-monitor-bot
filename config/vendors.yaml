@@ -1,0 +1,26 @@
+# Définissez ici, par domaine, comment extraire prix/stock/disponibilité.
+# Vous pouvez avoir plusieurs entrées; la sélection se fait par correspondance du domaine dans l'URL.
+
+vendors:
+  - name: "Exemple générique (statique)"
+    domain: "example.com"
+    dynamic: false
+    selectors:
+      # Sélecteurs CSS (vous pouvez aussi mettre une clé xpath: "//..." si besoin)
+      price: ".price, #price, [itemprop='price']"
+      availability: ".availability, #availability, .product-status"
+      stock: ".stock, .qty, [data-stock]"
+    out_of_stock_keywords: ["rupture", "épuisé", "indisponible", "out of stock", "sold out"]
+    product_gone_keywords: ["404", "not found", "ce produit n'existe plus", "page not found"]
+    wait_until: "load"  # pour Playwright: "load" | "domcontentloaded" | "networkidle"
+
+  - name: "Exemple dynamique (JS)"
+    domain: "some-js-shop.test"
+    dynamic: true
+    selectors:
+      price: ".pdp-price"
+      availability: ".pdp-availability"
+      stock: ".pdp-stock"
+    out_of_stock_keywords: ["rupture", "épuisé", "indisponible", "out of stock", "sold out"]
+    product_gone_keywords: ["404", "not found", "ce produit n'existe plus", "page not found"]
+    wait_until: "networkidle"
