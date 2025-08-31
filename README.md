@@ -1,3 +1,7 @@
+<img width="1885" height="855" alt="Screenshot 2025-08-31 175225" src="https://github.com/user-attachments/assets/13afcfe2-7230-4370-9dc4-f867501c6f52" />
+
+<img width="1541" height="860" alt="Screenshot 2025-08-31 175242" src="https://github.com/user-attachments/assets/06412070-d424-48ff-b2c0-934a60f5a529" />
+
 
 # Supplier Monitor Bot — README Complet
 
